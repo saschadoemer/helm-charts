@@ -46,6 +46,7 @@ Kubernetes: `>= 1.19-0`
 | broker.troe.dbPort | int | `5432` | port of the postgres to be used |
 | broker.troe.dbUser | string | `"user"` | username to authenticate with at postgres |
 | broker.troe.enabled | bool | `false` | should temporal representation of entities be enabled |
+| broker.multiserviceEnabled | bool | `false` | should the broker be started in multiservice mode |
 | deployment.additionalAnnotations | object | `{}` | additional annotations for the deployment, if required |
 | deployment.additionalLabels | object | `{}` | additional labels for the deployment, if required |
 | deployment.affinity | object | `{}` | affinity template ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity |
@@ -88,7 +89,7 @@ Kubernetes: `>= 1.19-0`
 | route.annotations | object | `{}` | annotations to be added to the route |
 | route.enabled | bool | `false` |  |
 | route.tls | object | `{}` | tls configuration for the route |
-| service.annotations | object | `{}` | addtional annotations, if required |
+| service.annotations | object | `{}` | additional annotations, if required |
 | service.port | int | `1026` | port to be used by the service |
 | service.type | string | `"ClusterIP"` | service type |
 | serviceAccount | object | `{"create":false}` | if a orion specific service account should be used, it can be configured here ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ |
